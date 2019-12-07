@@ -1,0 +1,141 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:gif="http://wpfanimatedgif.codeplex.com"
+                    xmlns:local="clr-namespace:TaskStatusMonitor.Style">
+    <Style TargetType="ListBox"
+           x:Key="ListBoxBase">
+        <!--设置模板-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBox">
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto">
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="3"/>
+                        </ItemsPanelTemplate>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="ListBoxItem" x:Key="ItemStyle">
+        <Setter Property="Width"
+                Value="250"></Setter>
+        <Setter Property="Height"
+                Value="40"></Setter>
+        <Setter Property="Margin"
+                Value="5"></Setter>
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+        <Setter Property="Background"
+                Value="#FF080F69" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Foreground"
+                Value="#FFC5C2C2" />
+        <!--设置控件模板-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid Width="250">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="40" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0"
+                                       Text="XXXX队伍"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Grid Grid.Column="1">
+                                <StackPanel Orientation="Horizontal">
+                                    <Ellipse  
+                                             Height="20"
+                                             Width="20"
+                                             Fill="Green">
+                                        </Ellipse>
+                                    <Ellipse  
+                                             Height="20"
+                                             Width="20"
+                                             Fill="Green">
+                                    </Ellipse>
+                                    <Ellipse  
+                                             Height="20"
+                                             Width="20"
+                                             Fill="Green">
+                                    </Ellipse>
+                                    <!--<Image Height="20"
+                                           Width="20"
+                                           gif:ImageBehavior.AnimatedSource="D:\dezhaowang\Test\跑马灯\TaskStatusMonitor\TaskStatusMonitor\Images\66.gif"></Image>-->
+                                        <Ellipse  
+                                             Height="20"
+                                             Width="20"
+                                             Fill="Green">
+                                    </Ellipse>
+                                    <Ellipse 
+                                             Height="20"
+                                             Width="20"
+                                             Fill="Green">
+                                    </Ellipse>
+                                </StackPanel>
+                                    <!--<ListBox ItemsSource="{Binding Path=CurBigTaskList.SubTaskList,UpdateSourceTrigger=PropertyChanged}">
+                                    <ListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <UniformGrid Columns="7" />
+                                        </ItemsPanelTemplate>
+                                    </ListBox.ItemsPanel>
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Ellipse x:Name="Ellipse"
+                                                         Height="20"
+                                                         Width="20"
+                                                         Fill="Green">
+                                                --><!--<Ellipse.Effect>
+                                                    <DropShadowEffect Opacity="1"
+                                                                      ShadowDepth="0"
+                                                                      Color="GreenYellow"
+                                                                      BlurRadius="200"
+                                                                      Direction="10"></DropShadowEffect>
+                                                </Ellipse.Effect>--><!-- 
+                                                </Ellipse>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>-->
+                            </Grid>
+                            <TextBlock Grid.Column="2" Text="查看" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <!--设置触发器-->
+        <!--<Style.Triggers>
+            <Trigger Property="IsSelected"
+                     Value="true">
+                <Setter Property="Background"
+                        Value="#808080" />
+                <Setter Property="Foreground"
+                        Value="White" />
+                <Setter Property="BorderBrush"
+                        Value="Green" />
+                <Setter Property="BorderThickness"
+                        Value="2" />
+            </Trigger>
+            <Trigger Property="IsMouseOver"
+                     Value="true">
+                <Setter Property="Background"
+                        Value="Red" />
+                <Setter Property="BorderBrush"
+                        Value="Black" />
+                <Setter Property="BorderThickness"
+                        Value="2" />
+            </Trigger>
+        </Style.Triggers>-->
+    </Style>
+
+</ResourceDictionary>
